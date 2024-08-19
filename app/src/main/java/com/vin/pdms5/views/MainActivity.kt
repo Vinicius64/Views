@@ -8,11 +8,12 @@ import androidx.core.view.WindowInsetsCompat
 import com.vin.pdms5.views.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var amb: ActivityMainBinding
+    private val amb: ActivityMainBinding by lazy{
+        ActivityMainBinding.inflate(layoutInflater)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        amb = ActivityMainBinding.inflate(layoutInflater)
         setContentView(amb.root)
 
 
